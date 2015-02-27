@@ -1,11 +1,15 @@
-//Load jQuery
-(function(){
-	var newscript = document.createElement('script');
-	newscript.type = 'text/javascript';
-	newscript.async = true;
-	newscript.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js';
+function replaceCats () {
+	var images = document.getElementsByTagName('img');
 
-	(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(newscript);
+	var request = new XMLHttpRequest();
+	request.open("GET", "http://thecatapi.com/api/images/get?format=xml&results_per_page=20&type=png,jpg", false);
+	request.send();
+	var xml = request.responseXML;
+	var urls = xml.getElementsByTagName("url");
+	
+	for (var i = 0; i <images.length; i++) {
+		images[i].src = urls[i].childNodes[0].nodeValue;
+	}
+}
 
-	console.log("jQuery loaded.");
-})();
+(function () { replaceCats(); })();
