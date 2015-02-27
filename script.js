@@ -1,4 +1,4 @@
-function replaceCats () {
+(function () {
 	var images = document.getElementsByTagName('img');
 
 	var request = new XMLHttpRequest();
@@ -10,6 +10,4 @@ function replaceCats () {
 	for (var i = 0; i <images.length; i++) {
 		images[i].src = urls[i].childNodes[0].nodeValue;
 	}
-}
-
-(function () { replaceCats(); })();
+})();
