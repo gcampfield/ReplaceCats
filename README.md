@@ -6,12 +6,13 @@ You can either load the script from `script.js` through the console, or you can 
 
 ## Test It Out
 
-![alt text][puppy1]
-![alt text][puppy1]
-![alt text][puppy1]
-![alt text][puppy1]
+[Replace the puppies!](javascript:(function(){var images=document.getElementsByTagName('img');var i=0;var rci = setInterval(function(){images[i].src="http://edgecats.net/?"+new Date().getTime();if(++i==images.length){clearInterval(rci);}},10);})();)
 
-
+![alt text][puppy1]
+![alt text][puppy2]
+![alt text][puppy3]
+![alt text][puppy4]
+![alt text][puppy5]
 
 Enjoy!
 
