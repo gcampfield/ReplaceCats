@@ -6,7 +6,7 @@ You can either load the script from `script.js` through the console, or you can 
 
 ## Test It Out
 
-[Replace the puppies!](javascript:(function(){var images=document.getElementsByTagName('img');var i=0;var rci = setInterval(function(){images[i].src="http://edgecats.net/?"+new Date().getTime();if(++i==images.length){clearInterval(rci);}},10);})();)
+Bookmark the code and then test it here to replace the puppies!
 
 <img src="TestImages/puppy_1.jpg" alt="Drawing" width="300" />
 <img src="TestImages/puppy_1.jpg" alt="Drawing" width="300" />
